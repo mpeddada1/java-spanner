@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.18.0](https://github.com/googleapis/java-spanner/compare/v6.17.4...v6.18.0) (2022-02-01)
+
+
+### Features
+
+* Updating readme with new gfe latency metrics ([#1630](https://github.com/googleapis/java-spanner/issues/1630)) ([d02601a](https://github.com/googleapis/java-spanner/commit/d02601ac73a1b9ab580480c4370ba26260996d8c))
+
+
+### Dependencies
+
+* update actions/github-script action to v5 ([#1658](https://github.com/googleapis/java-spanner/issues/1658)) ([a2f3790](https://github.com/googleapis/java-spanner/commit/a2f3790c35ecc960b50979caa12f6355f397c127))
+* update dependency com.google.cloud:google-cloud-monitoring to v3.2.1 ([#1637](https://github.com/googleapis/java-spanner/issues/1637)) ([73c9434](https://github.com/googleapis/java-spanner/commit/73c94349b56710adc788c3a8440648e7f66f228b))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.7.0 ([#1662](https://github.com/googleapis/java-spanner/issues/1662)) ([ece31c0](https://github.com/googleapis/java-spanner/commit/ece31c0d873ee537b167792dcbe9dc62d783a52d))
+
 ### [6.17.4](https://www.github.com/googleapis/java-spanner/compare/v6.17.3...v6.17.4) (2022-01-07)
 
 
