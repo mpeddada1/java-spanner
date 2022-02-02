@@ -158,6 +158,9 @@
           <buildArgs combine.children="append">
             <buildArg>--initialize-at-build-time=org.junit.platform.engine.TestTag,com.google.cloud.spanner.connection.it</buildArg>
             <buildArg>--initialize-at-run-time=io.grpc.netty.shaded.io.netty.internal.tcnative.AsyncSSLPrivateKeyMethod</buildArg>
+            <buildArg>-Dspanner.testenv.config.class=com.google.cloud.spanner.GceTestEnvConfig</buildArg>
+            <buildArg>-Dspanner.testenv.instance=projects/mpeddada-test/instances/spanner-testing</buildArg>
+            <buildArg>-Dspanner.gce.config.project_id=mpeddada-test</buildArg>
           </buildArgs>
         </configuration>
       </plugin>
