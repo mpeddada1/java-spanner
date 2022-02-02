@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-shared-config</artifactId>
-    <version>1.2.6</version>
+    <version>1.2.7-SNAPSHOT</version>
   </parent>
 
   <developers>
@@ -134,7 +134,6 @@
     <module>proto-google-cloud-spanner-admin-database-v1</module>
     <module>google-cloud-spanner-bom</module>
   </modules>
-
   <build>
     <plugins>
       <!-- TODO: Remove this once the shared configuration updates to use Java 8 -->
@@ -149,6 +148,17 @@
           <compilerArgument>-Xlint:unchecked</compilerArgument>
           <compilerArgument>-Xlint:deprecation</compilerArgument>
           <showDeprecation>true</showDeprecation>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.graalvm.buildtools</groupId>
+        <artifactId>native-maven-plugin</artifactId>
+        <configuration>
+          <buildArgs combine.children="append">
+            <buildArg>--initialize-at-build-time=org.junit.platform.engine.TestTag,com.google.cloud.spanner.connection.it</buildArg>
+            <buildArg>--initialize-at-run-time=io.grpc.netty.shaded.io.netty.internal.tcnative.AsyncSSLPrivateKeyMethod</buildArg>
+          </buildArgs>
         </configuration>
       </plugin>
     </plugins>

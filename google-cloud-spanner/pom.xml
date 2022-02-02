@@ -101,6 +101,18 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <spanner.testenv.config.class>com.google.cloud.spanner.GceTestEnvConfig</spanner.testenv.config.class>
+            <spanner.testenv.instance>projects/mpeddada-test/instances/spanner-testing</spanner.testenv.instance>
+            <spanner.gce.config.project_id>mpeddada-test</spanner.gce.config.project_id>
+            <!--            <spanner.testenv.kms_key.name>projects/gcloud-devel/locations/us-east1/keyRings/cmek-test-key-ring/cryptoKeys/cmek-test-key</spanner.testenv.kms_key.name>-->
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+      <plugin>
         <?m2e ignore?>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>flatten-maven-plugin</artifactId>
