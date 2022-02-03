@@ -100,6 +100,8 @@
           </execution>
         </executions>
       </plugin>
+
+<!--  System properties for native image testing -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -112,6 +114,8 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
+
+
       <plugin>
         <?m2e ignore?>
         <groupId>org.codehaus.mojo</groupId>
