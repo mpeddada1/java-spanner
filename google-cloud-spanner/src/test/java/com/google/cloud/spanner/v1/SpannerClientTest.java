@@ -86,9 +86,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Generated("by gapic-generator-java")
 public class SpannerClientTest {
+  private static final Logger LOGGER = LoggerFactory.getLogger(SpannerClientTest.class);
   private static MockServiceHelper mockServiceHelper;
   private static MockSpanner mockSpanner;
   private LocalChannelProvider channelProvider;
@@ -96,6 +99,7 @@ public class SpannerClientTest {
 
   @BeforeClass
   public static void startStaticServer() {
+    LOGGER.info("Testing logging in Storage integration tests");
     mockSpanner = new MockSpanner();
     mockServiceHelper =
         new MockServiceHelper(
@@ -110,6 +114,7 @@ public class SpannerClientTest {
 
   @Before
   public void setUp() throws IOException {
+    LOGGER.info("Testing logging in Storage setup method");
     mockServiceHelper.reset();
     channelProvider = mockServiceHelper.createChannelProvider();
     SpannerSettings settings =
@@ -127,6 +132,7 @@ public class SpannerClientTest {
 
   @Test
   public void createSessionTest() throws Exception {
+    LOGGER.info("Testing logging in createSessionTest");
     Session expectedResponse =
         Session.newBuilder()
             .setName(
